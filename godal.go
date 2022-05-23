@@ -3006,7 +3006,7 @@ func (layer Layer) NextFeature() *Feature {
 	return &Feature{hndl}
 }
 
-// CreateFeature copy a feature on Layer
+// CreateFeature creates a feature on Layer
 func (layer Layer) CreateFeature(feat *Feature, opts ...CreateFeatureOption) error {
 	cfo := createFeatureOpts{}
 	for _, opt := range opts {
@@ -3020,7 +3020,7 @@ func (layer Layer) CreateFeature(feat *Feature, opts ...CreateFeatureOption) err
 	return nil
 }
 
-// NewFeature creates a feature on Layer
+// NewFeature creates a feature on Layer from a geometry
 func (layer Layer) NewFeature(geom *Geometry, opts ...NewFeatureOption) (*Feature, error) {
 	nfo := newFeatureOpts{}
 	for _, opt := range opts {
